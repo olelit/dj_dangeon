@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.http import JsonResponse
+from django.views import View
 
-# Create your views here.
+from app.services import generate_level
+
+
+class StartView(View):
+    def get(self, request):
+        data = generate_level()
+        return JsonResponse({"data": data})
