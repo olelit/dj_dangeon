@@ -5,9 +5,11 @@ import HelpMenu from "./components/HelpMenu/HelpMenu";
 
 function App() {
   return (
-    <div className="App">
-        <LevelPage/>
-        <HelpMenu/>
+    <div className="flex h-screen">
+        <div className="w-4/5 flex items-center justify-center">
+            <LevelPage />
+        </div>
+        <HelpMenu />
     </div>
   );
 }
